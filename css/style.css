@@ -102,7 +102,7 @@ body>div {
 
 /* caixa opções de cada tipo menu */
 .kind-options { 
-    overflow: scroll;
+    overflow-x: scroll;
     display: flex;
     margin-bottom: 27px;
 }
@@ -122,7 +122,9 @@ body>div {
 }
 
 .option>img {
+    width: 144px;
     margin-bottom: 8px;
+    border-radius: 4px;
 }
 
 /* nome do prato */

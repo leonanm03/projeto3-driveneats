@@ -20,7 +20,7 @@ p {
 /*div principal com todo o conteúdo*/
 body>div {
     background-color: #EEEEEE;
-    width: 100%;
+    width: 414px;
     margin: auto;
 }
 
@@ -39,6 +39,7 @@ body>div {
     flex-direction: column;
     justify-content: center;
     padding-left: 21px;
+    z-index: 2;
 }
 
 .logo {
@@ -66,6 +67,7 @@ body>div {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
 /* botão da barra inferior */
@@ -101,15 +103,17 @@ body>div {
 }
 
 /* caixa opções de cada tipo menu */
-.kind-options { 
+.kind-options {
     overflow-x: scroll;
     display: flex;
     margin-bottom: 27px;
 }
 
+
 /* cada caixa de opção */
 .option {
     background-color: white;
+    position: relative;
     width: 172px;
     height: 216px;
     padding: 18px 14px;
@@ -119,8 +123,30 @@ body>div {
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
     margin-right: 14px;
+
 }
 
+/* icone de selecionado (escondido)*/
+.option>ion-icon {
+    display: none;
+    position: absolute;
+    bottom: 16px;
+    right: 13px;
+    font-size: 16px;
+    color: #32B72F;
+}
+
+/* marca de seleção */
+.select {
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
+}
+
+/* mostra o icone de selecionado */
+.select>ion-icon {
+    display: inline;
+}
+
+/* imagem do prato */
 .option>img {
     width: 144px;
     margin-bottom: 8px;

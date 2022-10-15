@@ -1,12 +1,9 @@
-let finish_buttom = document.querySelector(".bottom-button");
-let dish_selected = false;
-let drink_selected = false;
-let dessert_selected = false;
+let finish_button = document.querySelector(".bottom-button");
+finish_button.disabled = true; // desabilita o botão de finalzar o pedido
 
-function enableButton(button) {
-    button.classList.toggle("allow-button");
-    finish_buttom.disabled = false;
-}
+// variáveis de controle para verificar os tipos de pratos já selecionados
+let dish_selected, drink_selected, dessert_selected;
+
 
 function selectDish(seletor) {
     const lastSelect = document.querySelector(".dish-select");
@@ -17,7 +14,8 @@ function selectDish(seletor) {
 
     seletor.classList.add("dish-select");
 
-    dish_selected = true;
+    dish_selected = seletor.innerHTML;
+    enableButton();
 }
 
 function selectDrink(seletor) {
@@ -29,7 +27,8 @@ function selectDrink(seletor) {
 
     seletor.classList.add("drink-select");
 
-    drink_selected = true;
+    drink_selected = seletor.innerHTML;
+    enableButton();
 }
 
 function selectDessert(seletor) {
@@ -40,6 +39,22 @@ function selectDessert(seletor) {
     }
 
     seletor.classList.add("dessert-select");
+    dessert_selected = seletor.innerHTML;
 
-    dessert_selected = true;
+    enableButton();
+}
+
+function enableButton() {
+
+    if (dish_selected !== undefined) {
+        if (drink_selected !== undefined) {
+            if (dessert_selected !== undefined) {
+                const finish_text = document.querySelector(".bottom-button>p");
+                finish_text.innerHTML = "Fechar pedido"
+                finish_button.disabled = false;
+                finish_button.classList.add("allow-button");
+            }
+        }
+    }
+
 }

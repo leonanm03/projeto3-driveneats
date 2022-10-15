@@ -58,3 +58,11 @@ function enableButton() {
     }
 
 }
+
+function deliveryMessage() {
+    let dish = "Dish", drink = "Drink", dessert = "Dessert", price = 0;
+
+    let str = `     Olá, gostaria de fazer o pedido:\n - Prato: ${dish}\n - Bebida: ${drink}\n - Sobremesa: ${dessert}\n Total: R$ ${price}`;
+    str = encodeURIComponent(str);
+    window.open("https://wa.me/5548999996979?text=" + str);
+}

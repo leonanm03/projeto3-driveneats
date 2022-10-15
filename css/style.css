@@ -7,6 +7,7 @@
 body {
     width: 414px;
     margin: auto;
+    position: relative;
 }
 
 h1 {
@@ -56,6 +57,8 @@ body>div {
 
 /* barra superior */
 
+
+
 /*barra inferior*/
 .bottombar {
     background-color: white;
@@ -70,8 +73,10 @@ body>div {
     z-index: 2;
 }
 
+
+
 /* botão da barra inferior */
-.bottombar>button {
+.bottom-button {
     background: #CBCBCB;
     border: #CBCBCB;
     width: 364px;
@@ -84,6 +89,14 @@ body>div {
     text-align: center;
     color: white;
 }
+
+/* habilita o botão ao selecionar as 3 opções */
+.allow-button {
+    background-color: #32B72F;
+    border-color: #32B72F;
+}
+
+
 
 /* barra inferior */
 
@@ -137,12 +150,16 @@ body>div {
 }
 
 /* marca de seleção */
-.select {
+.dish-select,
+.drink-select,
+.dessert-select {
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
 }
 
 /* mostra o icone de selecionado */
-.select>ion-icon {
+.dish-select>ion-icon,
+.drink-select>ion-icon,
+.dessert-select>ion-icon {
     display: inline;
 }
 

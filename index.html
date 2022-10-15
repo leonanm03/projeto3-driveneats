@@ -26,7 +26,7 @@
         <h1>Primeiro, seu prato</h1>
         <div class="kind-options">
           <!-- inicio caixa de opção -->
-          <div class="option select">
+          <div onclick="selectDish(this)" class="option">
             <img src="./figs/frango_yin_yang 1.png">
             <p class="plate">Frango Yin Yang</p>
             <p class="content">Um pouco de batata, um pouco de salada</p>
@@ -36,29 +36,32 @@
           <!-- fim caixa de opção -->
 
           <!-- inicio caixa de opção -->
-          <div class="option">
+          <div onclick="selectDish(this)" class="option">
             <img src="./figs/frango_yin_yang 1.png">
             <p class="plate">Frango Yin Yang</p>
             <p class="content">Um pouco de batata, um pouco de salada</p>
             <p class="price">R$ 14,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <!-- fim caixa de opção -->
 
           <!-- inicio caixa de opção -->
-          <div class="option">
+          <div onclick="selectDish(this)" class="option">
             <img src="./figs/frango_yin_yang 1.png">
             <p class="plate">Frango Yin Yang</p>
             <p class="content">Um pouco de batata, um pouco de salada</p>
             <p class="price">R$ 14,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <!-- fim caixa de opção -->
 
           <!-- inicio caixa de opção -->
-          <div class="option">
+          <div onclick="selectDish(this)" class="option">
             <img src="./figs/frango_yin_yang 1.png">
             <p class="plate">Frango Yin Yang</p>
             <p class="content">Um pouco de batata, um pouco de salada</p>
             <p class="price">R$ 14,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <!-- fim caixa de opção -->
 
@@ -71,38 +74,42 @@
         <h1>Agora, sua bebida</h1>
         <div class="kind-options">
           <!-- inicio caixa de opção -->
-          <div class="option">
+          <div onclick="selectDrink(this)" class="option">
             <img src="./figs/coquinha_gelada 1.png">
             <p class="plate">Coquinha gelada</p>
             <p class="content">Lata 350ml</p>
             <p class="price">R$ 4,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <!-- fim caixa de opção -->
 
           <!-- inicio caixa de opção -->
-          <div class="option">
+          <div onclick="selectDrink(this)" class="option">
             <img src="./figs/coquinha_gelada 1.png">
             <p class="plate">Coquinha gelada</p>
             <p class="content">Lata 350ml</p>
             <p class="price">R$ 4,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <!-- fim caixa de opção -->
 
           <!-- inicio caixa de opção -->
-          <div class="option">
+          <div onclick="selectDrink(this)" class="option">
             <img src="./figs/coquinha_gelada 1.png">
             <p class="plate">Coquinha gelada</p>
             <p class="content">Lata 350ml</p>
             <p class="price">R$ 4,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <!-- fim caixa de opção -->
 
           <!-- inicio caixa de opção -->
-          <div class="option">
+          <div onclick="selectDrink(this)" class="option">
             <img src="./figs/coquinha_gelada 1.png">
             <p class="plate">Coquinha gelada</p>
             <p class="content">Lata 350ml</p>
             <p class="price">R$ 4,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <!-- fim caixa de opção -->
 
@@ -117,38 +124,42 @@
         <h1>Por fim, sua sobremesa</h1>
         <div class="kind-options">
           <!-- inicio caixa de opção -->
-          <div class="option">
+          <div onclick="selectDessert(this)" class="option">
             <img src="./figs/pudim 1.jpg">
             <p class="plate">Pudim</p>
             <p class="content">Apenas pudim</p>
             <p class="price">R$ 7,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <!-- fim caixa de opção -->
 
           <!-- inicio caixa de opção -->
-          <div class="option">
+          <div onclick="selectDessert(this)" class="option">
             <img src="./figs/pudim 1.jpg">
             <p class="plate">Pudim</p>
             <p class="content">Apenas pudim</p>
             <p class="price">R$ 7,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <!-- fim caixa de opção -->
 
           <!-- inicio caixa de opção -->
-          <div class="option">
+          <div onclick="selectDessert(this)" class="option">
             <img src="./figs/pudim 1.jpg">
             <p class="plate">Pudim</p>
             <p class="content">Apenas pudim</p>
             <p class="price">R$ 7,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <!-- fim caixa de opção -->
 
           <!-- inicio caixa de opção -->
-          <div class="option">
+          <div onclick="selectDessert(this)" class="option">
             <img src="./figs/pudim 1.jpg">
             <p class="plate">Pudim</p>
             <p class="content">Apenas pudim</p>
             <p class="price">R$ 7,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
           </div>
           <!-- fim caixa de opção -->
 
@@ -162,7 +173,7 @@
 
     <!-- inicio barra inferior-->
     <div class="bottombar">
-      <button>
+      <button onclick="enableButton(this)" class="bottom-button">
         <P>Selecione os 3 itens para fechar o pedido</P>
       </button>
     </div>
@@ -171,6 +182,7 @@
   </div>
   <!--fim da página-->
   <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <script src="./scripts/script.js"></script>
 </body>
 
 </html>

@@ -60,9 +60,28 @@ function enableButton() {
 }
 
 function deliveryMessage() {
-    let dish = "Dish", drink = "Drink", dessert = "Dessert", price = 0;
+    const dish = (document.querySelector(".dish-select>.plate").innerHTML); // armazena o nome do prato
+    const drink = (document.querySelector(".drink-select>.plate").innerHTML); // armazena o nome da bebida
+    const dessert = (document.querySelector(".dessert-select>.plate").innerHTML); // armazena o nome da sobremesa
+    let price = 0; // "price" irá armazenar a soma dos valores que x receber.
+    let x = (document.querySelector(".dish-select>.price").innerHTML).replace("R$ ", ""); // x receberá o valor de cada parte da refeição
 
+    // Cálculo do preço total
+    x = x.replace(",", ".");
+    x = Number(x);
+    price += x;    
+    x = (document.querySelector(".drink-select>.price").innerHTML).replace("R$ ", ""); // preço bebida
+    x = x.replace(",", ".");
+    x = Number(x);
+    price += x;    
+    x = (document.querySelector(".dessert-select>.price").innerHTML).replace("R$ ", ""); // preço sobremesa
+    x = x.replace(",", ".");
+    x = Number(x);
+    price += x;    
+
+    price = String(price.toFixed(2).replace(".", ",")); // price é convertido para uma string com "," e duas casas decimais
+    
     let str = `     Olá, gostaria de fazer o pedido:\n - Prato: ${dish}\n - Bebida: ${drink}\n - Sobremesa: ${dessert}\n Total: R$ ${price}`;
     str = encodeURIComponent(str);
-    window.open("https://wa.me/5548999996979?text=" + str);
+    window.open("https://wa.me/5548984658277?text=" + str);
 }

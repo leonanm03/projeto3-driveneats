@@ -81,7 +81,7 @@ function deliveryMessage() {
 
     price = String(price.toFixed(2).replace(".", ",")); // price é convertido para uma string com "," e duas casas decimais
     
-    let str = `     Olá, gostaria de fazer o pedido:\n - Prato: ${dish}\n - Bebida: ${drink}\n - Sobremesa: ${dessert}\n Total: R$ ${price}`;
+    let str = `Olá, gostaria de fazer o pedido:\n- Prato: ${dish}\n- Bebida: ${drink}\n- Sobremesa: ${dessert}\nTotal: R$ ${price}`;
     str = encodeURIComponent(str);
     window.open("https://wa.me/5548984658277?text=" + str);
 }

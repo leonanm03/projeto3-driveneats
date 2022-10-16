@@ -83,5 +83,5 @@ function deliveryMessage() {
     
     let str = `Olá, gostaria de fazer o pedido:\n- Prato: ${dish}\n- Bebida: ${drink}\n- Sobremesa: ${dessert}\nTotal: R$ ${price}`;
     str = encodeURIComponent(str);
-    window.open("https://wa.me/5548984658277?text=" + str);
+    window.open("https://wa.me/5548999996979?text=" + str);
 }
